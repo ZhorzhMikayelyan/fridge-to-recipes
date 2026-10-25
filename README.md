@@ -4,6 +4,36 @@ Homework 1: a small AI-assisted application that turns available ingredients and
 
 Built with JavaScript, Node.js, HTML, and CSS. No framework, database, build step, or third-party runtime packages are needed.
 
+## Work in VS Code
+
+Install Git, Node.js 22.9 or newer, and Visual Studio Code. Open the project folder with **File > Open Folder**, or clone its GitHub repository using **Git: Clone** in the Command Palette (`Ctrl+Shift+P` on Windows).
+
+Open **Run and Debug** (`Ctrl+Shift+D`), select a configuration, and press **F5**:
+
+- **Run demo (no API key)** starts the fixed example without credentials.
+- **Run app (OpenAI API)** starts live generation and loads `.env` if present.
+
+Open <http://localhost:3000> after the server starts. For live mode, follow the `.env` setup below first. Stop a debug session before starting another server on the same port.
+
+The **Tasks: Run Task** command also provides **Run demo**, **Run app**, and **Run tests**. You can run the same npm commands in VS Code's integrated terminal. No extra VS Code extensions are required for this project.
+
+## GitHub workflow
+
+The project is a Git repository. Commit the source, README, example files, VS Code configuration, and GitHub Actions workflow. `.env` stays on your computer; the empty `.env.example` template is included in Git.
+
+Before making your own commits, set your identity in the project's terminal. Replace the placeholder values with your name and an email associated with your GitHub account (or your GitHub-provided no-reply address):
+
+```sh
+git config user.name "Your Name"
+git config user.email "YOUR_GITHUB_COMMIT_EMAIL"
+```
+
+To publish an extracted copy that has no GitHub remote yet, use VS Code's **Publish to GitHub** action and sign in when prompted. Suggested repository name: `fridge-to-recipes`. Choose public visibility for a visible portfolio project, or private visibility if preferred. If you cloned the project from GitHub, its remote is already configured.
+
+For later changes, use **Source Control**: review the diff, stage the changed files, enter a clear English commit message, select **Commit**, then **Sync Changes**. Submit the repository URL for the assignment.
+
+The workflow in `.github/workflows/test.yml` runs `npm ci --ignore-scripts`, `npm test`, and `npm run example` on pushes and pull requests. It needs no OpenAI key because it uses mocked API responses and the explicit demo fixture. Its result appears in the repository's **Actions** tab after the project is pushed.
+
 ## Requirements covered
 
 | Assignment requirement | Implementation |
@@ -274,6 +304,8 @@ A live OpenAI call has not been verified in the supplied project because no API 
 
 ```text
 public/                 HTML, CSS, and browser JavaScript
+.vscode/                VS Code launch configurations and tasks
+.github/workflows/      Automated tests on GitHub
 src/recipes.js          Validation, AI prompt/schema, API call, retries
 server.js               Local HTTP server and routes
 examples/request.json   Sample invocation input
@@ -283,7 +315,7 @@ test/app.test.js        Automated tests
 .env.example            Environment template without credentials
 ```
 
-The downloaded project includes an initialized local Git repository with an initial commit. No remote repository has been created. If your submission requires a repository URL, push this folder to your own Git hosting account and submit that URL. Keep `.env` untracked.
+The downloaded project includes Git history. The GitHub workflow above explains how to publish an extracted copy or continue working from a clone. Keep `.env` untracked.
 
 ## AI assistance
 
@@ -293,3 +325,6 @@ AI assistance was used to implement the application, write the recipe prompt, pr
 
 - [OpenAI structured outputs](https://developers.openai.com/api/docs/guides/structured-outputs)
 - [GPT-4.1 mini model](https://developers.openai.com/api/docs/models/gpt-4.1-mini)
+- [GitHub in VS Code](https://code.visualstudio.com/docs/sourcecontrol/github)
+- [Node.js debugging in VS Code](https://code.visualstudio.com/docs/nodejs/nodejs-debugging)
+- [Building and testing Node.js on GitHub](https://docs.github.com/en/actions/tutorials/build-and-test-code/nodejs)
