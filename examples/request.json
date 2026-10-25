@@ -1,0 +1,7 @@
+{
+  "ingredients": ["eggs", "tomatoes", "spinach", "olive oil", "salt", "black pepper"],
+  "dietary": "vegetarian",
+  "cuisine": "Italian",
+  "maxCookTime": 20,
+  "servings": 2
+}

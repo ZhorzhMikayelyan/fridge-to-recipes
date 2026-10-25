@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Turn ingredients you already have into three practical recipe ideas.">
+  <title>Fridge-to-Recipes</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Fridge-to-Recipes home"><span class="brand-mark">f.</span> Fridge-to-Recipes</a>
+      <span class="header-note">A little inspiration for your next meal.</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">FROM WHAT YOU HAVE, TO WHAT YOU COOK</p>
+        <h1 id="page-title">Good food starts<br>in your fridge.</h1>
+        <p class="intro-copy">Tell us what's on hand. Get three recipe ideas, with every ingredient and step laid out.</p>
+      </section>
+
+      <p id="demo-notice" class="demo-notice" hidden>Demo mode · Fixed example recipes, no AI request. Select <strong>Load example</strong> to try it.</p>
+
+      <form id="recipe-form" class="input-panel">
+        <div class="ingredients-field">
+          <div class="section-label"><span class="step-number">01</span><label for="ingredients">What's in your fridge?</label></div>
+          <p id="ingredients-help" class="field-help">Separate ingredients with commas or new lines. Include pantry staples you have, too.</p>
+          <textarea id="ingredients" name="ingredients" rows="5" maxlength="5000" required aria-describedby="ingredients-help" placeholder="e.g. eggs, tomatoes, spinach, olive oil, salt, black pepper"></textarea>
+          <button class="text-button" id="load-example" type="button">Load example <span aria-hidden="true">↗</span></button>
+        </div>
+
+        <fieldset class="constraints">
+          <legend><span class="step-number">02</span> Make it your own <span class="optional">optional</span></legend>
+          <div class="constraint-grid">
+            <div class="field">
+              <label for="dietary">Dietary restrictions</label>
+              <input id="dietary" name="dietary" maxlength="300" placeholder="e.g. vegetarian, no nuts">
+            </div>
+            <div class="field">
+              <label for="cuisine">Cuisine</label>
+              <input id="cuisine" name="cuisine" maxlength="100" placeholder="e.g. Italian">
+            </div>
+            <div class="field">
+              <label for="max-time">Maximum time <span class="unit">minutes</span></label>
+              <input id="max-time" name="maxCookTime" type="number" min="1" max="1440" step="1" placeholder="No limit">
+            </div>
+            <div class="field">
+              <label for="servings">Servings</label>
+              <input id="servings" name="servings" type="number" min="1" max="20" step="1" placeholder="2 by default">
+            </div>
+          </div>
+          <p class="field-help constraints-help">Time includes preparation and cooking.</p>
+        </fieldset>
+
+        <div class="form-footer">
+          <p>Three ideas. Your ingredients. One less decision.</p>
+          <button class="primary-button" id="submit-button" type="submit"><span id="button-text">Find recipes</span><span id="button-icon" aria-hidden="true">→</span></button>
+        </div>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <p id="error" class="error" role="alert" hidden></p>
+
+      <section class="results-section" aria-labelledby="results-title">
+        <div class="results-header"><h2 id="results-title">Your next meal</h2><span id="results-caption">Let's see what's possible.</span></div>
+        <div id="empty-state" class="empty-state">
+          <div class="plate" aria-hidden="true"><span></span></div>
+          <h3>A few ingredients. Three possibilities.</h3>
+          <p>Add what's in your fridge and we'll take it from there.</p>
+        </div>
+        <div id="recipes" class="recipe-grid" aria-busy="false"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Fridge-to-Recipes</span><span>Made with JavaScript & a little AI assistance.</span></footer>
+  </div>
+</body>
+</html>

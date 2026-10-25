@@ -1,0 +1,63 @@
+{
+  "recipes": [
+    {
+      "title": "Tomato and Spinach Scramble",
+      "servings": 2,
+      "estimatedCookTimeMinutes": 10,
+      "ingredients": [
+        { "name": "eggs", "quantity": "4", "missing": false },
+        { "name": "tomatoes", "quantity": "2 medium", "missing": false },
+        { "name": "spinach", "quantity": "100 g", "missing": false },
+        { "name": "olive oil", "quantity": "1 tbsp", "missing": false },
+        { "name": "salt", "quantity": "1/4 tsp", "missing": false },
+        { "name": "black pepper", "quantity": "1/8 tsp", "missing": false }
+      ],
+      "steps": [
+        "Wash the vegetables. Dice the tomatoes and roughly chop the spinach.",
+        "Heat the olive oil in a frying pan over medium heat. Cook the tomatoes for 3 minutes, then add the spinach and cook for 1 minute.",
+        "Beat the eggs with the salt and pepper. Add them to the pan and stir gently for 3 minutes, until fully set. Divide between two plates."
+      ]
+    },
+    {
+      "title": "Spinach and Mozzarella Frittata",
+      "servings": 2,
+      "estimatedCookTimeMinutes": 18,
+      "ingredients": [
+        { "name": "eggs", "quantity": "4", "missing": false },
+        { "name": "tomatoes", "quantity": "2 medium", "missing": false },
+        { "name": "spinach", "quantity": "100 g", "missing": false },
+        { "name": "olive oil", "quantity": "1 tbsp", "missing": false },
+        { "name": "salt", "quantity": "1/4 tsp", "missing": false },
+        { "name": "black pepper", "quantity": "1/8 tsp", "missing": false },
+        { "name": "vegetarian mozzarella", "quantity": "60 g", "missing": true }
+      ],
+      "steps": [
+        "Wash and dice the tomatoes, chop the spinach, and tear the mozzarella into small pieces.",
+        "Heat the olive oil in a small nonstick frying pan over medium heat. Cook the tomatoes for 3 minutes, then wilt the spinach for 1 minute.",
+        "Beat the eggs with the salt and pepper. Pour into the pan and distribute the mozzarella on top.",
+        "Cover and cook over low heat for 8 to 10 minutes, until the eggs are fully set in the center. Cut in half and serve."
+      ]
+    },
+    {
+      "title": "Italian-Style Egg and Tomato Toast",
+      "servings": 2,
+      "estimatedCookTimeMinutes": 15,
+      "ingredients": [
+        { "name": "eggs", "quantity": "4", "missing": false },
+        { "name": "tomatoes", "quantity": "2 medium", "missing": false },
+        { "name": "spinach", "quantity": "100 g", "missing": false },
+        { "name": "olive oil", "quantity": "1 tbsp", "missing": false },
+        { "name": "salt", "quantity": "1/4 tsp", "missing": false },
+        { "name": "black pepper", "quantity": "1/8 tsp", "missing": false },
+        { "name": "bread", "quantity": "2 large slices", "missing": true },
+        { "name": "fresh basil", "quantity": "6 leaves", "missing": true }
+      ],
+      "steps": [
+        "Wash the vegetables and basil. Dice the tomatoes and chop the spinach and basil. Toast the bread.",
+        "Heat half the olive oil in a frying pan. Cook the tomatoes for 3 minutes and add the spinach for 1 minute. Season with half the salt and pepper, then spoon onto the toast.",
+        "Add the remaining oil to the pan. Beat the eggs with the remaining salt and pepper, then scramble for 3 to 4 minutes until fully set.",
+        "Divide the eggs between the two slices of toast and scatter the basil on top."
+      ]
+    }
+  ]
+}

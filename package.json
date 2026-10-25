@@ -1,0 +1,14 @@
+{
+  "name": "fridge-to-recipes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three AI recipe suggestions from ingredients already in your fridge.",
+  "type": "module",
+  "engines": { "node": ">=22.9.0" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "demo": "node --env-file-if-exists=.env server.js --demo",
+    "example": "node scripts/example.js",
+    "test": "node --test"
+  }
+}

@@ -1,0 +1,107 @@
+:root {
+  color-scheme: light;
+  --ink: #243c30;
+  --muted: #667267;
+  --green: #2d6548;
+  --line: #dce1d6;
+  --paper: #f7f8f2;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { margin: 0; }
+button, input, textarea { font: inherit; }
+button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+button:disabled { cursor: wait; opacity: .65; }
+button:focus-visible, a:focus-visible { outline: 3px solid #7cae83; outline-offset: 4px; }
+.page { width: min(1160px, calc(100% - 64px)); margin: 0 auto; }
+.site-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; gap: 10px; align-items: center; text-decoration: none; color: var(--ink); font-size: 17px; font-weight: 650; letter-spacing: -.4px; }
+.brand-mark { display: inline-grid; place-content: center; width: 34px; height: 34px; border-radius: 10px; background: var(--green); color: white; font: italic bold 29px Georgia, serif; padding: 0 3px 5px 0; }
+.header-note, .site-footer { color: var(--muted); font-size: 12px; }
+.intro { padding: 49px 0 30px; }
+.eyebrow { margin: 0 0 16px; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--green); }
+h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: 400; font-size: clamp(40px, 5vw, 60px); line-height: 1.07; letter-spacing: -2.5px; }
+.intro-copy { font-size: 15px; line-height: 1.7; color: var(--muted); max-width: 540px; margin: 17px 0 0; }
+.input-panel { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 28px 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 36px; box-shadow: 0 4px 20px #243c3003; }
+.section-label, .constraints legend { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 650; margin-bottom: 8px; }
+.step-number { font-size: 10px; font-weight: 700; color: var(--green); background: #edf3e9; border-radius: 50%; display: inline-grid; place-content: center; width: 25px; height: 25px; flex: 0 0 25px; }
+.field-help { color: var(--muted); font-size: 12px; line-height: 1.6; margin: 0 0 12px; }
+input, textarea { width: 100%; background: #fcfdf9; color: var(--ink); border: 1px solid #d5dccf; border-radius: 7px; padding: 11px 12px; font-size: 13px; transition: border-color .15s; }
+textarea { min-height: 116px; resize: vertical; line-height: 1.65; }
+input { min-height: 41px; }
+input::placeholder, textarea::placeholder { color: #7d877c; opacity: 1; }
+input:focus, textarea:focus { outline: 2px solid #a4c5a0; outline-offset: 2px; border-color: #648a67; }
+.text-button { padding: 8px 0 0; font-size: 12px; background: none; border: 0; color: var(--green); font-weight: 650; }
+.text-button span { padding-left: 5px; }
+.constraints { padding: 0; margin: 0; border: 0; min-width: 0; }
+.constraints legend { padding: 0; margin-bottom: 17px; width: 100%; }
+.optional { margin-left: auto; font-size: 10px; font-weight: 400; color: var(--muted); background: #f3f5ee; padding: 4px 8px; border-radius: 20px; }
+.constraint-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.field label { display: block; font-size: 12px; font-weight: 600; margin: 0 0 7px; }
+.unit { color: var(--muted); font-weight: 400; margin-left: 3px; font-size: 10px; }
+.constraints-help { margin: 10px 0 0; }
+.form-footer { grid-column: 1 / -1; display: flex; justify-content: space-between; align-items: center; gap: 18px; border-top: 1px solid #edf0e7; padding: 16px 0; }
+.form-footer p { color: var(--muted); font-size: 12px; margin: 0; }
+.primary-button { border: 0; border-radius: 7px; color: white; background: var(--green); font-weight: 600; font-size: 13px; min-width: 170px; min-height: 43px; padding: 12px 18px; display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; }
+.primary-button:hover:not(:disabled) { background: #224f37; }
+.status { color: var(--muted); font-size: 13px; margin: 14px 0 0; }
+.status:empty { display: none; }
+.error, .demo-notice { font-size: 13px; padding: 13px 16px; line-height: 1.6; border-radius: 8px; }
+.error { background: #fff0e9; color: #943b23; border: 1px solid #efc9b9; margin: 16px 0 0; }
+.demo-notice { background: #f0f4e5; color: #4c5c32; border: 1px solid #dbe3c8; margin: 0 0 18px; }
+.results-section { padding: 31px 0 44px; }
+.results-header { display: flex; justify-content: space-between; gap: 20px; align-items: baseline; margin-bottom: 17px; }
+h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 26px; font-weight: 400; letter-spacing: -.7px; }
+.results-header > span { color: var(--muted); font-size: 12px; }
+.empty-state { min-height: 208px; padding: 30px 18px; display: flex; flex-direction: column; justify-content: center; align-items: center; background: #f0f3e9; border: 1px dashed #d6ddc9; border-radius: 12px; text-align: center; }
+.plate { width: 47px; height: 47px; border: 1px solid #9dae87; border-radius: 50%; padding: 6px; margin-bottom: 14px; transform: rotate(-20deg); }
+.plate span { display: block; height: 100%; border: 1px solid #becbaa; border-radius: 50%; position: relative; }
+.plate span::after { content: ''; width: 16px; height: 10px; background: #88a56e; border-radius: 100% 0 100% 0; position: absolute; left: 8px; top: 9px; }
+.empty-state h3 { font-size: 15px; font-weight: 600; margin: 0 0 8px; }
+.empty-state p { font-size: 12px; color: var(--muted); margin: 0; }
+.recipe-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.recipe-card { padding: 23px; background: white; border: 1px solid var(--line); border-radius: 12px; overflow-wrap: anywhere; }
+.card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.recipe-number { font-size: 9px; letter-spacing: 1.3px; font-weight: 700; color: var(--green); }
+.time-tag { font-size: 11px; color: var(--green); background: #eef4e9; padding: 5px 8px; border-radius: 5px; white-space: nowrap; }
+.recipe-card h3 { font-family: Georgia, "Times New Roman", serif; font-size: 25px; line-height: 1.2; font-weight: 400; margin: 18px 0 9px; letter-spacing: -.5px; }
+.recipe-meta { font-size: 11px; line-height: 1.7; color: var(--muted); margin: 0 0 23px; }
+.recipe-card h4 { font-size: 12px; margin: 20px 0 12px; font-weight: 650; }
+.ingredient-list { list-style: none; padding: 0; margin: 0; }
+.ingredient-list li { display: flex; justify-content: space-between; gap: 12px; align-items: center; padding: 8px 0; border-bottom: 1px solid #eff1eb; font-size: 12px; }
+.ingredient-name { display: block; }
+.quantity { display: block; font-size: 11px; color: var(--muted); margin-top: 3px; }
+.availability { font-size: 9px; white-space: nowrap; color: #55724b; }
+.missing .availability { color: #9b4d23; background: #fff0e3; border-radius: 4px; padding: 4px 6px; }
+.steps { margin: 0; padding-left: 18px; }
+.steps li { font-size: 12px; color: #4e6053; line-height: 1.8; padding-left: 4px; margin-bottom: 11px; }
+.steps li::marker { color: var(--green); font-weight: 600; }
+.site-footer { padding: 20px 0 26px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 20px; font-size: 10px; }
+.spinner { width: 14px; height: 14px; border: 2px solid #ffffff50; border-top-color: white; border-radius: 50%; animation: spin .7s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 850px) {
+  .input-panel { gap: 24px; padding: 24px 24px 0; }
+  .recipe-grid { grid-template-columns: 1fr; }
+  .recipe-card { padding: 25px; }
+  .header-note { display: none; }
+}
+@media (max-width: 650px) {
+  .page { width: calc(100% - 32px); }
+  .site-header { padding: 20px 0; }
+  .intro { padding-top: 34px; }
+  h1 { font-size: 43px; letter-spacing: -1.8px; }
+  .intro-copy { font-size: 14px; }
+  .input-panel { grid-template-columns: 1fr; padding: 22px 19px 0; gap: 24px; }
+  .form-footer { flex-direction: column; align-items: stretch; padding: 17px 0; }
+  .form-footer p { text-align: center; font-size: 11px; }
+  .primary-button { justify-content: center; }
+  .results-header { display: block; }
+  .results-header > span { display: block; margin-top: 7px; }
+  .site-footer { flex-direction: column; gap: 8px; }
+  .constraints legend { font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
